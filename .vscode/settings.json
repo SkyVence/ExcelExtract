@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./functions"
+    ],
+    "python.analysis.typeCheckingMode": "basic"
+}
