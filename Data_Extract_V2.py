@@ -1,7 +1,12 @@
+#Library to install | pip pywin32 | pip textfile
+from datetime import date 
+import textfile
 import win32com.client 
 from win32com.client import Dispatch
 import sys, io
-from datetime import date 
+
+#Request date and time
+time = date.fromtimestamp(1326244364)
 
 #Debug Excel
 Debug = input("Debug : True/false ?")
@@ -21,10 +26,10 @@ name = input("Enter Name : ")
 
 #Ask User for name of the board
 print("What is the range of the table you want to extract ? ex : A1:A32")
-columnsrange = input("Enter Column Name : ")
+tableselect = input("Enter range name : ")
 
 #Extract data from range (tablerange)
-data_extract = workbook.Worksheets(name).TableObject('columnsrange')
+data_extract = workbook.Worksheets(name).Range(tableselect).value
 
 #Print into console data_extract 
 print(data_extract)
