@@ -1,6 +1,5 @@
-#Library to install | pip pywin32 | pip textfile
+#Library to install | pip pywin32 |
 from datetime import date 
-import textfile
 import win32com.client 
 from win32com.client import Dispatch
 import sys, io
